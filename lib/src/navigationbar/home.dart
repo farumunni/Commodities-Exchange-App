@@ -91,7 +91,7 @@ class _HomeState extends State<Home> {
               ),
               const BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.person_3,
+                  Icons.person,
                   color: Colors.white,
                 ),
                 label: 'Profile',

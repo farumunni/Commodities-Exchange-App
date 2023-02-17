@@ -17,6 +17,7 @@ import 'package:untitled/src/login/signup.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'src/firebase/firebase_options.dart';
 import 'src/dashboard/dashboard.dart';
+import 'src/navigationbar/sidemenu.dart';
 
 //12121
 Future<void> main() async {
@@ -28,8 +29,7 @@ Future<void> main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
   print("Mongodb Initiated");
-  await MongoDatabase.connect();
-
+   await MongoDatabase.connect();
   runApp(const MyApp());
 }
 
@@ -43,8 +43,9 @@ class MyApp extends StatelessWidget {
         '/Login': (context) => const Login(),
         '/Signup': (context) => const Signup(),
         '/Dashboard': (context) => const Dashboard(),
+        '/Home': (context) => const Home(),
       },
-      home: const Splashscreen(),
+      home: const Home(),
 
       //const Dashboard(value: "value"),
       debugShowCheckedModeBanner: false,

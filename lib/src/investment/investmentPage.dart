@@ -4,6 +4,7 @@ import 'package:untitled/src/investment/cardDesign.dart';
 import 'package:untitled/src/investment/dataset.dart';
 import 'package:untitled/src/investment/investment.dart';
 import 'package:untitled/src/investment/LastInvestment.dart';
+import '../../src/navigationbar/sidemenu.dart';
 
 class InvestmentPage extends StatelessWidget {
   const InvestmentPage({Key? key}) : super(key: key);
@@ -14,7 +15,15 @@ class InvestmentPage extends StatelessWidget {
         elevation: 0,
         backgroundColor: Color(0xFF126172),
         leading:
-            IconButton(icon: Icon(Icons.menu), onPressed: () => print("menu"),),
+            IconButton(icon: Icon(Icons.menu), onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SideMenu()),
+              );
+              print("menu");
+            } 
+            ),
+           // print("menu"),),
         actions: [
             IconButton(icon: Icon(Icons.settings), onPressed: () => print("menu"))
         ],
